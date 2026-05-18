@@ -1,0 +1,241 @@
+/* Общие стили */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: #696969;
+    background-color: #fffaf7;
+}
+
+/* Шапка сайта */
+header {
+    background: linear-gradient(135deg,#ADD8E6 0%, #4682B4 100%);
+    color: white;
+    text-align: center;
+    padding: 2rem 1rem;
+    box-shadow: 0 4px 12px rgba(139, 69, 19, 0.2);
+}
+
+header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+}
+
+header p {
+    font-size: 1.2rem;
+    opacity: 0.9;
+}
+
+/* Навигация */
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    background-color: #ADD8E6;
+    padding: 0;
+}
+
+nav li {
+    margin: 0;
+}
+
+nav a {
+    display: block;
+    color: white;
+    text-decoration: none;
+    padding: 1rem 1.5rem;
+    transition: background-color 0.3s;
+    border-right: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+nav a:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+/* Основной контент */
+main {
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+}
+
+section {
+    margin-bottom: 3rem;
+    padding: 2rem;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.08);
+}
+
+h2 {
+    color: #ADD8E6;
+    margin-bottom: 1.5rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid #f5e6d3;
+}
+
+p {
+    margin-bottom: 1rem;
+}
+
+/* О кафе */
+.about p {
+    font-size: 1.1rem;
+    line-height: 1.7;
+}
+
+/* Меню */
+.menu-items {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+}
+
+.menu-item {
+    padding: 1.5rem;
+    border: 1px solid #f5e6d3;
+    border-radius: 8px;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.menu-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 20px rgba(139, 69, 19, 0.15);
+}
+
+.menu-item h3 {
+    color:#B0E0E6;
+    margin-bottom: 0.8rem;
+}
+
+.price {
+    font-weight: bold;
+    color: #ADD8E6;
+    font-size: 1.2rem;
+}
+
+/* Кнопка сотрудничества */
+.cooperation-cta {
+    text-align: center;
+}
+
+.cooperation-cta h2 {
+    margin-bottom: 1.5rem;
+}
+
+button {
+    background: linear-gradient(135deg, #8b4513 0%, #a0522d 100%);
+    color: white;
+    border: none;
+    padding: 1rem 2rem;
+    font-size: 1.1rem;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s;
+    box-shadow: 0 4px 8px rgba(139, 69, 19, 0.3);
+}
+
+button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(139, 69, 19, 0.4);
+}
+
+/* Контакты */
+.contacts p {
+    margin-bottom: 0.7rem;
+    font-size: 1.1rem;
+}
+
+/* Вакансии */
+.vacancy {
+    margin-bottom: 2rem;
+    padding-bottom: 2rem;
+    border-bottom: 1px dashed #eee;
+}
+
+.vacancy:last-child {
+    border-bottom: none;
+}
+
+.vacancy h3 {
+    color: #5d4037;
+    margin-bottom: 0.8rem;
+}
+
+/* Условия работы */
+.conditions ul {
+    padding-left: 1.5rem;
+}
+
+.conditions li {
+    margin-bottom: 0.8rem;
+    line-height: 1.6;
+}
+
+/* Поставщики */
+.supplier {
+    margin-bottom: 2rem;
+}
+
+.supplier h3 {
+    color: #5d4037;
+    margin-bottom: 0.8rem;
+}
+
+/* Подвал */
+footer {
+    background-color: #4682B4;
+    color: white;
+    text-align: center;
+    padding: 1.5rem;
+    margin-top: 3rem;
+}
+
+/* Адаптивность */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 2rem;
+    }
+    
+    header p {
+        font-size: 1rem;
+    }
+    
+    nav ul {
+        flex-direction: column;
+    }
+    
+    nav a {
+        border-right: none;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    }
+    
+    .menu-items {
+        grid-template-columns: 1fr;
+    }
+    
+    section {
+        padding: 1.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    header {
+        padding: 1.5rem 1rem;
+    }
+    
+    header h1 {
+        font-size: 1.8rem;
+    }
+    
+    button {
+        width: 100%;
+        padding: 1rem;
+    }
+}
